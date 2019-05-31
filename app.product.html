@@ -1,0 +1,20 @@
+<h3>Start product </h3>
+<table border="2">
+    <tr>
+        <th>Product Id </th>
+        <th>Product Name </th>
+        <th>Product Price</th>
+        <th> Description </th>
+        <th>Inventory Id</th>
+        <th> Inventory Name</th>
+    </tr>
+    <tr *ngFor="let p of products">
+        <td>{{p.id}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.description}}</td>
+        <td>{{p.inventory.id}}</td>
+        <td>{{p.inventory.name}}</td>
+    </tr>
+</table>
+<input type="button" value="Add Product" (click)="addProduct()"/>
